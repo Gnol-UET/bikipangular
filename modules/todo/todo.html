@@ -1,0 +1,38 @@
+<br>
+
+
+    <form name="formNhap">
+        <input name="ten" type="text" ng-model="submitItem" required> {{submitItem}}
+        <span ng-show="formNhap.ten.$error.required" style="color:darkorange">Not null</span>
+        </br>
+        <button type="button" ng-click="submit()">Submit</button>
+    </form>
+
+    {{itemList}}
+    </br>
+    All items:
+    <div ng-repeat="item in itemList track by $index " ng-class="{'pending' : item.checked }">
+        <input type="checkbox" ng-model="item.checked">{{item.checked}}
+        {{item.title}}
+        <div ng-if="item.checked" style="display: inline">
+            <button type="button" ng-click="finish(item);changeClass()" >Finish</button>
+            <button type="button" ng-click="delete(item)" >Delete</button>
+        </div>
+    </div>
+
+<!--<div ng-repeat="item in items" ng-class="{'pending-delete': item.checked}">-->
+    <!--name: {{item.name}}, {{item.title}}-->
+    <!--<input type="checkbox" ng-model="item.checked"> <span ng-show="item.checked">(will be deleted)</span>-->
+<!--</div>-->
+
+
+</br></br>
+
+    <div ng-repeat="item in itemList track by $index">
+        <input type="checkbox" ng-model="item.done"> {{item.title}}
+        <div ng-if="checkedBox" style="display: inline">
+            <button type="button" ng-click="notYet(item)" >Not Yet</button>
+            <button type="button" ng-click="delete(item)" >Delete</button>
+        </div>
+    </div>
+</div>

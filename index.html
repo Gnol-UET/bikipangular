@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-init="countries = [{locale:'en-vn', ten:'vn'}]">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chu</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <ul>
+        <li><a ui-sref="home">Home</a> </li>
+        <li><a ui-sref="feature">Feature</a> </li>
+        <li><a ui-sref="about">About</a> </li>
+        <li><a ui-sref="ngocha">ngocha</a> </li>
+        <li><a ui-sref="form">Form</a> </li>
+        <li><a ui-sref="ajax">Ajax</a> </li>
+        <li><a ui-sref="plus">Plus</a> </li>
+        <li><a ui-sref="todo">Todo</a> </li>
+    </ul>
+    <div ui-view></div>
+
+</body>
+<!--route-->
+<script src="app.js"></script>
+
+<script src="modules/about/about.js"></script>
+<script src="modules/feature/feature.js"></script>
+<script src="modules/form/form.js"></script>
+<script src="modules/ajax/ajax.js"></script>
+<script src="modules/plus/plus.js"></script>
+<script src="modules/todo/todo.js"></script>
+
+<!--controller-->
+<script src="modules/about/aboutCtrl.js"></script>
+<script src="modules/feature/featureCtrl.js"></script>
+<script src="modules/form/formCtrl.js"></script>
+<script src="modules/ajax/ajaxCtrl.js"></script>
+<script src="modules/todo/todoCtrl.js"></script>
+<script src="modules/plus/plusCtrl.js"></script>
+<!--service -->
+<script src="modules/plus/plusService.js"></script>
+</html>

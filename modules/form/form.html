@@ -1,0 +1,14 @@
+<div>
+    <form name="formNhap">
+        ten: <input type="text" name="ten" ng-model="nguoi.name" required>
+        <span ng-show="formNhap.ten.$error.required">Ten khong duoc trong</span>
+        </br>
+        email: <input type="email" name="meo" ng-model="nguoi.email" required>
+        <span ng-show="formNhap.meo.$error.email">Email khong hop le</span>
+
+        <input type="number" ng-model="soThuNhat" required>
+        <input type="number" ng-model="soThuHai" required>
+        <button ng-click="plusThis()">Plus this</button>
+        {{ketqua}}
+    </form>
+</div>

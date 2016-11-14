@@ -1,0 +1,43 @@
+{{aboutinfo+" " + "Long"}}
+{{tien*20+1}}
+<div ng-init=" hocphi = 2000 ; tienhoc = 6000; hienthinut=true " >
+    <input type="text" ng-model="ten">
+    <p>xin chao <span ng-bind="ten"></span></p>
+    <p>xin chao <span ng-bind="countries[0].locale"></span></p>
+    <p>xin chao <span ng-bind="aboutinfo"></span></p>
+
+    nhap ten: <input type="text" ng-model="person.name">
+    nhap tuoi: <input type="text" ng-model="person.age">
+    </br>
+    <span style="color: blue"> ban dang nhap: {{person.name | uppercase}}</span>
+    <span style="color: blue"> ban dang nhap: {{person.name | lowercase}}</span>
+    </br>
+    ban da nhap <span ng-bind="person.getInfo()"></span>
+    </br>
+    nhap mon hoc <input type="text" ng-model="tenMonHoc">
+    </br>
+    <table style="border: solid black">
+        <tr>
+            <th>Subject Name</th>
+            <th>Diem thi</th>
+        </tr>
+        <tr ng-repeat="subject in subjects |  filter: tenMonHoc | orderBy: 'diemthi'" >
+            <td>{{subject.name}}</td>
+            <td>{{subject.diemthi}}</td>
+        </tr>
+    </table>
+    </br>
+    <button ng-click="reset()">reset</button>
+    </br>
+    </br>
+
+    <input type="checkbox" ng-model="vohieuhoakichhoatnut">Vo hieu hoa nut
+    <button ng-disabled="vohieuhoakichhoatnut">Nhan vao day!</button>
+    <input type="checkbox" ng-model="hienthinut" checked>Hien thi nut
+    <button ng-show="hienthinut">Nhan vao day!</button>
+    <input type="checkbox" ng-model="annut">An nut
+    <button ng-hide="annut">Nhan vao day!</button>
+    {{clickcounter}}
+    <input type="button" ng-click = "clickcounter = clickcounter+1" value="click me"/>
+    <div ng-click="clickcounter = clickcounter+1">aweg</div>
+</div>
