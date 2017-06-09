@@ -7,3 +7,6 @@
 }
 .pending {
     text-decoration: line-through}
+.card{
+    position: absolute;
+}

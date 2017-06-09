@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Trang chu</title>
+    <!--import dau tien-->
+    <!--tweenmax phụ thuộc vào jquery-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/gsap/src/minified/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -14,11 +19,11 @@
         <li><a ui-sref="home">Home</a> </li>
         <li><a ui-sref="feature">Feature</a> </li>
         <li><a ui-sref="about">About</a> </li>
-        <li><a ui-sref="ngocha">ngocha</a> </li>
         <li><a ui-sref="form">Form</a> </li>
         <li><a ui-sref="ajax">Ajax</a> </li>
         <li><a ui-sref="plus">Plus</a> </li>
         <li><a ui-sref="todo">Todo</a> </li>
+        <li><a ui-sref="tweenMax">TweenMax</a> </li>
     </ul>
     <div ui-view></div>
 
@@ -32,6 +37,7 @@
 <script src="modules/ajax/ajax.js"></script>
 <script src="modules/plus/plus.js"></script>
 <script src="modules/todo/todo.js"></script>
+<script src="modules/tweenMax/tweenMax.js"></script>
 
 <!--controller-->
 <script src="modules/about/aboutCtrl.js"></script>
@@ -40,6 +46,7 @@
 <script src="modules/ajax/ajaxCtrl.js"></script>
 <script src="modules/todo/todoCtrl.js"></script>
 <script src="modules/plus/plusCtrl.js"></script>
+<script src="modules/tweenMax/tweenMaxCtrl.js"></script>
 <!--service -->
 <script src="modules/plus/plusService.js"></script>
 </html>

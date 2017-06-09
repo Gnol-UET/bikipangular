@@ -4,7 +4,8 @@ angular.module('app', ['ui.router',
     'formModule',
     'ajaxModule',
     'plusModule',
-    'todoModule'
+    'todoModule',
+    'tweenMaxModule'
     ])
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home')
@@ -17,7 +18,8 @@ angular.module('app', ['ui.router',
             })
 
 
-    });
+    })
+    ;
 
 angular.module('app')
     .controller('homeController', function ($scope /*,injectables */) {
